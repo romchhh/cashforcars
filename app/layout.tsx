@@ -13,45 +13,47 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://flavusbusiness.com"),
+  metadataBase: new URL("https://autosite.example.com"),
   title: {
-    default: "Flavus Business Services — Corporate Advisory & Document Clearing in UAE",
-    template: "%s | Flavus Business Services",
+    default: "AutoDrive Motors — Premium Car Deals & Services",
+    template: "%s | AutoDrive Motors",
   },
   description:
-    "Flavus Business Services provides premium corporate advisory and document clearing solutions in the UAE — from company formation and Golden Visa support to residency management, legalization and certified translation.",
+    "AutoDrive Motors helps you buy, sell and finance cars with ease — instant online offers, verified vehicles, transparent pricing and full support from test drive to keys in hand.",
   keywords: [
-    "Flavus Business Services",
-    "corporate advisory UAE",
-    "document clearing Dubai",
-    "company formation UAE",
-    "Golden Visa services",
-    "residency management UAE",
-    "PRO services Dubai",
+    "AutoDrive Motors",
+    "buy car online",
+    "sell my car",
+    "car trade in",
+    "car financing",
+    "used cars marketplace",
+    "new cars deals",
   ],
-  authors: [{ name: "Flavus Business Services" }],
+  authors: [{ name: "AutoDrive Motors" }],
   openGraph: {
     type: "website",
     url: "/",
-    title: "Flavus Business Services — Corporate Advisory & Document Clearing in UAE",
+    title: "AutoDrive Motors — Premium Car Deals & Services",
     description:
-      "End‑to‑end corporate advisory and document clearing services in the UAE: company setup, Golden Visa, residency, legalization, translation and ongoing corporate support.",
-    siteName: "Flavus Business Services",
+      "Discover premium cars, instant offers and flexible financing with AutoDrive Motors. Everything you need to buy or sell your next car in one place.",
+    siteName: "AutoDrive Motors",
     images: [
       {
-        url: "/about-image.png",
+        url: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
         width: 1200,
         height: 630,
-        alt: "Flavus Business Services — corporate advisory and document clearing in the UAE",
+        alt: "AutoDrive Motors — premium cars at sunset",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flavus Business Services — Corporate Advisory & Document Clearing in UAE",
+    title: "AutoDrive Motors — Premium Car Deals & Services",
     description:
-      "Premium corporate advisory and document clearing solutions in the UAE for entrepreneurs, investors and businesses.",
-    images: ["/about-image.png"],
+      "Browse premium cars, request an instant offer and get full support from AutoDrive Motors.",
+    images: [
+      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
+    ],
   },
   icons: {
     icon: [

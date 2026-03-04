@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { heroServices } from '../data/services';
+import { heroServices } from "../data/services";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,16 +43,16 @@ export default function Hero() {
         {/* Main Hero Card with rounded corners and shadow */}
         <div className="relative bg-white rounded-[2.5rem] shadow-2xl">
           {/* Background Image */}
-          <div className="relative h-[700px] md:h-[800px] z-0 rounded-[2.5rem] overflow-hidden">
+          <div className="relative h-[720px] md:h-[820px] z-0 rounded-[2.5rem] overflow-hidden">
             <Image
-              src="/dubai-museum-hero.jpg"
-              alt="Dubai museums"
+              src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80"
+              alt="Sport cars at sunset"
               fill
               className="object-cover"
               priority
             />
             {/* Darker gradient overlay for better readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/85" />
           </div>
 
           {/* Hero Content Overlay */}
@@ -60,31 +60,35 @@ export default function Hero() {
             <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
-                <div className="text-left space-y-6 pt-44 md:pt-10">
-                  <p className="text-white text-xl font-normal tracking-wide" style={{ fontFamily: 'Corbel, sans-serif' }}>
-                    United Arab Emirates
+                <div className="text-left space-y-4 pt-40 md:pt-16">
+                  <p
+                    className="text-5xl md:text-[4.5rem] lg:text-[5rem] font-bold text-white leading-[1.02] tracking-tight"
+                    style={{ fontFamily: "Corbel, sans-serif" }}
+                  >
+                    We Buy Cars
                   </p>
-                  <h1 className="text-6xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight" style={{ fontFamily: 'Corbel, sans-serif' }}>
-                    Flavus Business
-                    <br />
-                    Services
+                  <h1
+                    className="text-5xl md:text-[4.5rem] lg:text-[5rem] font-bold text-white leading-[1.02] tracking-tight"
+                    style={{ fontFamily: "Corbel, sans-serif" }}
+                  >
+                    It&apos;s What We Do
                   </h1>
-                  <p className="text-white text-lg font-light" style={{ fontFamily: 'Corbel, sans-serif' }}>
-                    Corporate Advisory &amp; Document Clearing
+                  <p
+                    className="text-white text-lg md:text-2xl lg:text-3xl font-semibold"
+                    style={{ fontFamily: "Corbel, sans-serif" }}
+                  >
+                    Fast. Safe. Easy.
                   </p>
                   <Link
-                    href="#contact"
+                    href="/get-offer"
                     onClick={(e) => {
                       e.preventDefault();
-                      const element = document.getElementById('contact');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
+                      window.location.href = "/get-offer";
                     }}
                     className="inline-block backdrop-blur-xl bg-white/20 hover:bg-white/30 border border-white/30 text-white font-semibold px-8 py-3.5 rounded-lg transition-all mt-6 shadow-2xl hover:shadow-[0_0_30px_rgba(249,220,10,0.3)] hover:border-[#F9DC0A]/50"
-                    style={{ fontFamily: 'Corbel, sans-serif' }}
+                    style={{ fontFamily: "Corbel, sans-serif" }}
                   >
-                    Submit Your Request
+                    Get Car Offer
                   </Link>
                 </div>
 

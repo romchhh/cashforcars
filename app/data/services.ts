@@ -1,4 +1,13 @@
-import { FileText, Globe, PenTool, Building2, Plane, Users, Building, BarChart3, Settings } from 'lucide-react';
+import {
+  CarFront,
+  Gauge,
+  Fuel,
+  ShieldCheck,
+  CreditCard,
+  MapPin,
+  Sparkles,
+  FileText,
+} from "lucide-react";
 
 export interface Service {
   title: string;
@@ -12,85 +21,103 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    title: 'Company Formation & Corporate Setup',
-    subtitle: 'UAE Business',
-    description: 'New company formation in Mainland, Free Zones, and Offshore jurisdictions, business activity and license selection advisory.',
-    image: '/company-formation.jpg',
-    imagePosition: 'left',
-    Icon: Building2,
-    icon: '🏢',
+    title: "Buy Verified Used Cars",
+    subtitle: "Curated Inventory",
+    description:
+      "Browse a hand‑picked selection of inspected used cars with full history, transparent pricing and no hidden fees.",
+    image:
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "left",
+    Icon: CarFront,
+    icon: "🚗",
   },
   {
-    title: 'Document Clearance & PRO Services',
-    subtitle: 'Document Services',
-    description: 'Government document clearance and processing, immigration and visa-related documentation support, liaison with UAE government authorities.',
-    image: '/document-clearing.jpg',
-    imagePosition: 'left',
+    title: "Sell Your Car Fast",
+    subtitle: "Instant Offer",
+    description:
+      "Get an online estimate, confirm it with a quick inspection and receive payment securely without dealing with classifieds.",
+    image:
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "left",
+    Icon: Gauge,
+    icon: "⚡️",
+  },
+  {
+    title: "Trade‑In & Upgrade",
+    subtitle: "Smart Switch",
+    description:
+      "Use your current car as part of the payment for your next one, keeping monthly instalments under control.",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "right",
+    Icon: Sparkles,
+    icon: "🔄",
+  },
+  {
+    title: "Car Financing Assistance",
+    subtitle: "Flexible Payments",
+    description:
+      "Compare bank and in‑house financing options, choose a plan that suits your budget and sign everything in one visit.",
+    image:
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "right",
+    Icon: CreditCard,
+    icon: "💳",
+  },
+  {
+    title: "Registration & Insurance",
+    subtitle: "Paperwork Done Right",
+    description:
+      "We help you choose insurance, handle registration, plates and ownership transfer so you only worry about the drive.",
+    image:
+      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "left",
+    Icon: ShieldCheck,
+    icon: "🛡️",
+  },
+  {
+    title: "Fuel‑Efficient & Electric Options",
+    subtitle: "Future Ready",
+    description:
+      "Explore fuel‑efficient and electric cars with guidance on range, charging and total cost of ownership.",
+    image:
+      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "left",
+    Icon: Fuel,
+    icon: "🔋",
+  },
+  {
+    title: "City‑Friendly Compacts",
+    subtitle: "Urban Driving",
+    description:
+      "Perfect city cars with easy parking, low running costs and agile handling for everyday drives.",
+    image:
+      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "right",
+    Icon: MapPin,
+    icon: "📍",
+  },
+  {
+    title: "Performance & Luxury",
+    subtitle: "For Enthusiasts",
+    description:
+      "Sports cars and premium sedans for drivers who care about power, comfort and design.",
+    image:
+      "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "right",
+    Icon: Gauge,
+    icon: "🏁",
+  },
+  {
+    title: "Online Concierge Support",
+    subtitle: "From Screen to Keys",
+    description:
+      "Ask questions, reserve a car, book test drives and complete steps online with the help of our team.",
+    image:
+      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=80",
+    imagePosition: "left",
     Icon: FileText,
-    icon: '📄',
-  },
-  {
-    title: 'Translation & Document Legalization',
-    subtitle: 'Document Services',
-    description: 'Certified legal and official document translation, document legalization and attestation at local embassies and consulates in the UAE.',
-    image: '/translation-legalization.jpg',
-    imagePosition: 'right',
-    Icon: Globe,
-    icon: '🌐',
-  },
-  {
-    title: 'Power of Attorney & Notary Services',
-    subtitle: 'Legal Services',
-    description: 'Power of Attorney drafting coordination, notarization and attestation within the UAE, coordination with UAE notary public.',
-    image: '/power-of-attorney.jpg',
-    imagePosition: 'right',
-    Icon: PenTool,
-    icon: '✍️',
-  },
-  {
-    title: 'Visa & Immigration Services',
-    subtitle: 'Immigration Services',
-    description: 'Golden Visa issuance and full support, investor, partner, employment, and family visa issuance, residency renewal support.',
-    image: '/visa-immigration.jpg',
-    imagePosition: 'left',
-    Icon: Plane,
-    icon: '🛂',
-  },
-  {
-    title: 'Labor & Employment Services',
-    subtitle: 'Employment Services',
-    description: 'Labor file opening and management (MOHRE), employment contracts preparation and registration, work permit issuance.',
-    image: '/labor-employment.jpg',
-    imagePosition: 'left',
-    Icon: Users,
-    icon: '👥',
-  },
-  {
-    title: 'Banking Support Services',
-    subtitle: 'Financial Services',
-    description: 'Bank compliance and KYC documentation preparation, banking support and coordination.',
-    image: '/banking-support.jpg',
-    imagePosition: 'right',
-    Icon: Building,
-    icon: '🏦',
-  },
-  {
-    title: 'Tax Residency & Compliance Support',
-    subtitle: 'Tax Services',
-    description: 'Tax Residency Certificate application support, UAE tax residency structuring guidance, corporate tax registration.',
-    image: '/tax-residency.jpg',
-    imagePosition: 'right',
-    Icon: BarChart3,
-    icon: '📊',
-  },
-  {
-    title: 'Ongoing Corporate & Administrative Support',
-    subtitle: 'Administrative Services',
-    description: 'Corporate document maintenance and renewals, business support services for shareholders and executives.',
-    image: '/ongoing-support.jpg',
-    imagePosition: 'left',
-    Icon: Settings,
-    icon: '⚙️',
+    icon: "📲",
   },
 ];
 

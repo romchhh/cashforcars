@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,32 +8,68 @@ export default function Footer() {
           {/* Left Column - Branding */}
           <div>
             <Link href="#home" className="inline-block mb-4">
-              <Image
-                src="/6.png"
-                alt="Flavus Business Services Logo"
-                width={200}
-                height={70}
-                className="h-auto w-auto object-contain brightness-0 invert"
-              />
+              <div className="flex items-center gap-2">
+                <span
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-2xl bg-white text-[#222221] text-sm font-bold"
+                  style={{ fontFamily: 'Corbel, sans-serif' }}
+                >
+                  AD
+                </span>
+                <div className="flex flex-col leading-tight">
+                  <span
+                    className="text-lg font-bold text-white"
+                    style={{ fontFamily: 'Corbel, sans-serif' }}
+                  >
+                    AutoDrive Motors
+                  </span>
+                  <span
+                    className="text-[11px] tracking-[0.18em] uppercase text-[#9CA3AF]"
+                    style={{ fontFamily: 'Corbel, sans-serif' }}
+                  >
+                    We Buy Cars
+                  </span>
+                </div>
+              </div>
             </Link>
             <p className="text-sm text-[#6F6F6E] mb-1" style={{ fontFamily: 'Corbel, sans-serif' }}>Discover</p>
-            <p className="text-2xl font-bold text-white mb-2" style={{ fontFamily: 'Corbel, sans-serif' }}>Business Solutions</p>
-            <p className="text-xl font-bold text-white" style={{ fontFamily: 'Corbel, sans-serif' }}>Flavus Business Services</p>
+            <p className="text-2xl font-bold text-white mb-2" style={{ fontFamily: 'Corbel, sans-serif' }}>Your Next Car</p>
+            <p className="text-xl font-bold text-white" style={{ fontFamily: 'Corbel, sans-serif' }}>AutoDrive Motors</p>
+
+            {/* Footer Navigation */}
+            <div className="mt-6 space-y-2 text-sm">
+              <p className="text-[#6F6F6E] font-semibold uppercase tracking-[0.18em]" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                Menu
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/get-offer" className="text-white/80 hover:text-[#F9DC0A] transition-colors" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  Get Offer
+                </Link>
+                <Link href="/about" className="text-white/80 hover:text-[#F9DC0A] transition-colors" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  About Us
+                </Link>
+                <Link href="/locations" className="text-white/80 hover:text-[#F9DC0A] transition-colors" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  Locations
+                </Link>
+                <Link href="/how-it-works" className="text-white/80 hover:text-[#F9DC0A] transition-colors" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  How it Works
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Middle Column - Address */}
           <div>
             <p className="text-xs uppercase tracking-wider mb-4 text-[#6F6F6E] font-bold" style={{ fontFamily: 'Corbel, sans-serif' }}>ADDRESS</p>
             <p className="text-sm text-white/90 leading-relaxed mb-6" style={{ fontFamily: 'Corbel, sans-serif' }}>
-              Dubai based
+              AutoDrive Motors Showroom, Canada
               <br />
-              Supporting entrepreneurs and investors across the Emirates
+              Serving drivers across Canada and beyond
             </p>
             
             {/* Social Media Buttons */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a
-                href="https://wa.me/message/RPHDWYXEHJZQE1"
+                href="https://wa.me/0000000000000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg hover:scale-110"
@@ -45,7 +80,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/flavus.ae?igsh=N3g0aXU2YmNwbW13"
+                href="https://instagram.com/yourautodrive"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg hover:scale-110"
@@ -56,7 +91,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://t.me/contact_in_dubai"
+                href="https://t.me/yourautodrive"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg hover:scale-110"
@@ -73,19 +108,19 @@ export default function Footer() {
           <div>
             <p className="text-xs uppercase tracking-wider mb-4 text-[#6F6F6E] font-bold" style={{ fontFamily: 'Corbel, sans-serif' }}>SAY HELLO</p>
             <a
-              href="mailto:Customercare@flavus.ae"
+              href="mailto:hello@autodrivemotors.com"
               className="text-sm text-white/90 mb-3 inline-block hover:text-[#F9DC0A] transition-colors"
               style={{ fontFamily: 'Corbel, sans-serif' }}
             >
-              Customercare@flavus.ae
+              hello@autodrivemotors.com
             </a>
             <div className="w-full h-px bg-[#6F6F6E]/50 my-4"></div>
             <a
-              href="tel:+971585930042"
+              href="tel:+15551234567"
               className="text-2xl font-bold text-white inline-block hover:text-[#F9DC0A] transition-colors"
               style={{ fontFamily: 'Corbel, sans-serif' }}
             >
-              +971 58 593 0042
+              +1 (555) 123‑4567
             </a>
           </div>
         </div>
@@ -93,7 +128,7 @@ export default function Footer() {
         {/* Bottom Line */}
         <div className="border-t border-[#6F6F6E]/50 pt-8 text-center">
           <p className="text-xs text-[#6F6F6E]" style={{ fontFamily: 'Corbel, sans-serif' }}>
-            Flavus Business Services © All rights reserved. Proudly Designed & Developed by{' '}
+            AutoDrive Motors © All rights reserved. Proudly Designed & Developed by{' '}
             <Link 
               href="https://new.telebots.site/en" 
               target="_blank" 

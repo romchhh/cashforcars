@@ -7,36 +7,36 @@ export default function FAQs() {
 
   const faqItems = [
     {
-      question: 'What services does Flavus Business Services provide?',
-      answer: 'Flavus Business Services provides comprehensive corporate advisory and document clearing services including company formation, Golden Visa processing, residency and labor file management, document legalization and certified translation, as well as full document clearance services.',
+      question: 'What kind of cars does AutoDrive Motors offer?',
+      answer: 'AutoDrive Motors offers a curated mix of inspected used cars, city compacts, SUVs, performance models and selected new cars from trusted partners. Every car is checked for condition, mileage and history before it goes on sale.',
     },
     {
-      question: 'Where is Flavus Business Services located?',
-      answer: 'Flavus Business Services is a UAE-based firm operating across the Emirates, supporting entrepreneurs and investors throughout the region.',
+      question: 'How do I get an offer for my car?',
+      answer: 'You can request an offer online via the Get Offer page by sharing basic details about your car. We will send a preliminary estimate and then confirm the final offer after a quick on‑site or in‑store inspection.',
     },
     {
-      question: 'What types of businesses can Flavus assist with?',
-      answer: 'We support entrepreneurs and investors across various industries, providing structured solutions for company formation, compliance, and ongoing corporate maintenance in the UAE.',
+      question: 'Do you help with car financing?',
+      answer: 'Yes. We work with several banking and finance partners to help you compare rates, choose a monthly payment that works for you and complete all paperwork in one place.',
     },
     {
-      question: 'How does Flavus ensure regulatory compliance?',
-      answer: 'Operating in a highly regulated environment, we combine local expertise with international standards to deliver structured, transparent solutions that ensure full regulatory compliance with precision and efficiency.',
+      question: 'Are the cars inspected before purchase?',
+      answer: 'Every car goes through a multi‑point technical and cosmetic inspection. We verify documents, check for major accidents where possible and share the key findings with you before you sign anything.',
     },
     {
-      question: 'What makes Flavus different from other corporate advisory firms?',
-      answer: 'We don\'t just process applications — we build secure pathways for long-term business success in the UAE. Our approach combines Compliance, Clarity, and Continuity to support your business journey.',
+      question: 'What makes AutoDrive Motors different from other dealerships?',
+      answer: 'We focus on transparency and simplicity: clear pricing, detailed car information, guided financing, and support from the moment you request an offer until long after you drive away.',
     },
     {
-      question: 'How can I get started with Flavus Business Services?',
-      answer: 'You can contact us through our enquiry form or reach out directly to discuss your specific needs. We provide consultations to understand your requirements and offer tailored solutions for your business.',
+      question: 'Can I reserve a car online?',
+      answer: 'Yes, you can reserve a car online for a limited time while you arrange a test drive or documents. Our team will contact you to confirm the details and next steps.',
     },
     {
-      question: 'What is the typical timeline for company formation?',
-      answer: 'The timeline varies depending on the type of company and jurisdiction, but typically ranges from 2-4 weeks for mainland companies and 1-2 weeks for free zone companies. We expedite the process wherever possible while ensuring all documentation is complete and compliant.',
+      question: 'How long does the full process usually take?',
+      answer: 'If you already know which car you want and have documents ready, you can often complete everything in a single visit. With financing and insurance, the full process usually takes from a few hours to a couple of days.',
     },
     {
-      question: 'Do you provide ongoing support after company formation?',
-      answer: 'Yes, we provide comprehensive ongoing support including annual compliance management, visa renewals, labor file maintenance, and corporate governance advisory. We are committed to supporting your business throughout its entire lifecycle in the UAE.',
+      question: 'Do you offer support after I buy the car?',
+      answer: 'We stay in touch after purchase to help with service reminders, warranty questions and possible future trade‑in options when you are ready for your next car.',
     },
   ];
 
@@ -49,7 +49,6 @@ export default function FAQs() {
       <div className="max-w-[1200px] mx-auto px-0 md:px-8">
         {/* Header */}
         <div className="text-center mb-16 px-8 md:px-0">
-          <p className="text-[#6F6F6E] text-xs font-semibold mb-3 tracking-[0.2em] uppercase" style={{ fontFamily: 'Corbel, sans-serif' }}>Frequently Asked Questions</p>
           <h2 className="text-5xl md:text-6xl font-bold text-[#222221] leading-tight mb-4" style={{ fontFamily: 'Corbel, sans-serif' }}>
             Questions & Answers
           </h2>

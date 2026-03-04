@@ -7,8 +7,11 @@ export default function Services() {
       <div className="max-w-[1400px] mx-auto px-8">
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#222221] leading-tight" style={{ fontFamily: 'Corbel, sans-serif' }}>
-            Services
+          <h2
+            className="text-4xl md:text-5xl font-bold text-[#222221] leading-tight"
+            style={{ fontFamily: "Corbel, sans-serif" }}
+          >
+            Car Services & Offers
           </h2>
         </div>
 
