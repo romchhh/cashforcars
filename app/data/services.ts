@@ -21,103 +21,64 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    title: "Buy Verified Used Cars",
-    subtitle: "Curated Inventory",
+    title: "Cash for Used Cars",
+    subtitle: "Running or High Mileage",
     description:
-      "Browse a hand‑picked selection of inspected used cars with full history, transparent pricing and no hidden fees.",
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "Turn your everyday car into instant cash. We buy used vehicles in almost any condition, including high‑mileage workhorses, family SUVs and daily drivers across the GTA.",
+    image: "/services/service-hero-1.jpg",
     imagePosition: "left",
     Icon: CarFront,
     icon: "🚗",
   },
   {
-    title: "Sell Your Car Fast",
-    subtitle: "Instant Offer",
+    title: "Scrap & Non‑Running Vehicles",
+    subtitle: "Tow Included",
     description:
-      "Get an online estimate, confirm it with a quick inspection and receive payment securely without dealing with classifieds.",
-    image:
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
+      "Have a scrap, parked or non‑running car taking space? We offer cash for scrap vehicles and arrange free towing from driveways, underground parking and repair shops.",
+    image: "/services/service-hero-2.jpg",
     imagePosition: "left",
     Icon: Gauge,
     icon: "⚡️",
   },
   {
-    title: "Trade‑In & Upgrade",
-    subtitle: "Smart Switch",
+    title: "Accident & Damaged Cars",
+    subtitle: "Any Condition",
     description:
-      "Use your current car as part of the payment for your next one, keeping monthly instalments under control.",
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+      "Front‑end, rear‑end or flood damage — we still make offers. Skip body‑shop bills and get a guaranteed cash amount for your damaged vehicle.",
+    image: "/services-3.jpg",
     imagePosition: "right",
     Icon: Sparkles,
-    icon: "🔄",
+    icon: "🔧",
   },
   {
-    title: "Car Financing Assistance",
-    subtitle: "Flexible Payments",
+    title: "Same‑Day Offers & Pickup",
+    subtitle: "Fast Process",
     description:
-      "Compare bank and in‑house financing options, choose a plan that suits your budget and sign everything in one visit.",
-    image:
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "Share your vehicle details online, receive a cash offer in minutes and schedule same‑day pickup in many GTA areas — no viewings, no classifieds, no wasted time.",
+    image: "/services-4.jpg",
     imagePosition: "right",
     Icon: CreditCard,
-    icon: "💳",
+    icon: "⏱️",
   },
   {
-    title: "Registration & Insurance",
-    subtitle: "Paperwork Done Right",
+    title: "Paperwork & Ownership Transfer",
+    subtitle: "Stress‑Free",
     description:
-      "We help you choose insurance, handle registration, plates and ownership transfer so you only worry about the drive.",
-    image:
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+      "We guide you through Ontario ownership transfer requirements and bring the right paperwork so the sale is simple, legal and fully documented.",
+    image: "/about-bg.jpg",
     imagePosition: "left",
     Icon: ShieldCheck,
-    icon: "🛡️",
+    icon: "📝",
   },
   {
-    title: "Fuel‑Efficient & Electric Options",
-    subtitle: "Future Ready",
+    title: "GTA & Northern Ontario Coverage",
+    subtitle: "We Come to You",
     description:
-      "Explore fuel‑efficient and electric cars with guidance on range, charging and total cost of ownership.",
-    image:
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+      "From Toronto, Mississauga and Brampton to North Bay, Sudbury, Timmins and Thunder Bay — our buyers and tow partners operate across key Ontario cities.",
+    image: "/services/download-1dsda.jpg",
     imagePosition: "left",
-    Icon: Fuel,
-    icon: "🔋",
-  },
-  {
-    title: "City‑Friendly Compacts",
-    subtitle: "Urban Driving",
-    description:
-      "Perfect city cars with easy parking, low running costs and agile handling for everyday drives.",
-    image:
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
-    imagePosition: "right",
     Icon: MapPin,
     icon: "📍",
-  },
-  {
-    title: "Performance & Luxury",
-    subtitle: "For Enthusiasts",
-    description:
-      "Sports cars and premium sedans for drivers who care about power, comfort and design.",
-    image:
-      "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80",
-    imagePosition: "right",
-    Icon: Gauge,
-    icon: "🏁",
-  },
-  {
-    title: "Online Concierge Support",
-    subtitle: "From Screen to Keys",
-    description:
-      "Ask questions, reserve a car, book test drives and complete steps online with the help of our team.",
-    image:
-      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=80",
-    imagePosition: "left",
-    Icon: FileText,
-    icon: "📲",
   },
 ];
 

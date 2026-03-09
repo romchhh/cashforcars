@@ -29,7 +29,7 @@ const DRIVABILITY = [
   "Does not start",
 ];
 
-const COUNTRY_CODES = ["+971", "+1", "+44", "+33", "+49", "+380", "+48"];
+const COUNTRY_CODES = ["+1"];
 
 interface GetQuoteFormProps {
   showHeading?: boolean;
@@ -42,12 +42,14 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
   const [odometer, setOdometer] = useState("");
   const [drivability, setDrivability] = useState("");
   const [firstName, setFirstName] = useState("");
-  const [countryCode, setCountryCode] = useState("+971");
+  const [countryCode, setCountryCode] = useState("+1");
   const [phone, setPhone] = useState("");
   const [postal, setPostal] = useState("");
   const [errors, setErrors] = useState<Record<string, boolean>>({});
   const [submitted, setSubmitted] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const selectedMake = MAKES.find((m) => m.value === make);
   const models: CarModel[] = selectedMake?.models ?? [];
@@ -79,32 +81,67 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
     }
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const vehicleErrors = validateVehicle();
     const contactErrors = validateContact();
     const mergedErrors = { ...vehicleErrors, ...contactErrors };
     setErrors(mergedErrors);
-    if (Object.keys(mergedErrors).length === 0) {
+    if (Object.keys(mergedErrors).length > 0) {
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      setSubmitError(null);
+
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          year,
+          make,
+          model,
+          odometer,
+          drivability,
+          firstName,
+          countryCode,
+          phone,
+          postal,
+          sourcePath: window.location.pathname,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.error || "Failed to submit quote");
+      }
+
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (err) {
+      const message =
+        err instanceof Error ? err.message : "Failed to submit quote";
+      setSubmitError(message);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   const inputBase =
-    "w-full px-4 py-3.5 rounded-lg border text-sm md:text-base bg-white/90 text-[#222221] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#F9DC0A] focus:border-[#F9DC0A] transition-all";
+    "w-full px-4 py-3.5 rounded-lg border text-sm md:text-base bg-white/90 text-[#222221] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#10B981] focus:border-[#10B981] transition-all";
 
   const errorBorder = "border-red-500";
   const normalBorder = "border-[#E5E7EB]";
 
   const handlePhoneChange = (value: string) => {
-    const digits = value.replace(/\D/g, "").slice(0, 12);
-    const formatted = digits.replace(/(\d{3})(?=\d)/g, "$1 ");
-    setPhone(formatted);
+    setPhone(value);
   };
 
   const cardClasses = showHeading
-    ? "bg-white/95 backdrop-blur-xl rounded-[2rem] shadow-[0_24px_80px_rgba(15,23,42,0.35)] border border-[#F9DC0A]/70 ring-1 ring-[#F9DC0A]/30 p-6 md:p-10"
+    ? "bg-white/95 backdrop-blur-xl rounded-[2rem] shadow-[0_24px_80px_rgba(15,23,42,0.35)] border border-[#10B981]/60 ring-1 ring-[#10B981]/25 p-6 md:p-10"
     : "bg-white rounded-[2rem] shadow-2xl border border-[#E5E7EB] p-6 md:p-10";
 
   return (
@@ -116,14 +153,14 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
               className="text-3xl md:text-[2.5rem] font-bold text-[#222221] mb-2"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
-              Get A Quote Now!
+              Get Your Cash Offer in Under 60 Seconds
             </h2>
             <p
               className="text-sm md:text-base text-[#6F6F6E] max-w-2xl mx-auto"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
-              All fields are required — share a few details about your vehicle
-              and we&apos;ll get back with a tailored offer.
+              Tell us about your vehicle in the GTA or Northern Ontario and we&apos;ll send you a
+              free, no‑obligation cash offer with pickup time options.
             </p>
           </header>
         )}
@@ -144,7 +181,9 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
               className="text-sm text-[#6F6F6E] mb-6"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
-              Vehicle Year, Make, Model, Odometer and Drivability.
+              Get Your Cash Offer in Under 60 Seconds. Tell us about your vehicle in the GTA or
+              Northern Ontario and we&apos;ll send you a free, no‑obligation cash offer with pickup
+              time options.
             </p>
 
             {/* Year / Make / Model */}
@@ -401,17 +440,17 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
                   className="text-xs text-[#9CA3AF] max-w-xl"
                   style={{ fontFamily: "Corbel, sans-serif" }}
                 >
-                  By submitting this form, you agree to be contacted by
-                  AutoDrive Motors with information about your quote and related
-                  car offers.
+                  By submitting this form, you agree to be contacted by Cash4Cars GTA with
+                  information about your cash offer and to arrange vehicle pickup.
                 </p>
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center px-10 py-3.5 rounded-lg bg-[#222221] hover:bg-[#6F6F6E] text-white text-sm md:text-base font-semibold shadow-lg hover:shadow-xl transition-all"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center justify-center px-10 py-3.5 rounded-lg bg-[#059669] hover:bg-[#047857] disabled:bg-[#6EE7B7] disabled:cursor-not-allowed text-white text-sm md:text-base font-semibold shadow-lg hover:shadow-xl transition-all"
                   style={{ fontFamily: "Corbel, sans-serif" }}
                 >
-                  Get Quote Now
+                  {isSubmitting ? "Sending..." : "Get Quote Now"}
                 </button>
               </div>
             </>
@@ -423,12 +462,12 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
                 className="text-xs text-[#9CA3AF] max-w-xl"
                 style={{ fontFamily: "Corbel, sans-serif" }}
               >
-                Start with your vehicle details. Next, we&apos;ll ask for your
-                contact info to send the quote.
+                Start with your vehicle details. Next, we&apos;ll ask for your contact info so we
+                can confirm your cash offer and schedule pickup.
               </p>
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-10 py-3.5 rounded-lg bg-[#222221] hover:bg-[#6F6F6E] text-white text-sm md:text-base font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="inline-flex items-center justify-center px-10 py-3.5 rounded-lg bg-[#059669] hover:bg-[#047857] text-white text-sm md:text-base font-semibold shadow-lg hover:shadow-xl transition-all"
                 style={{ fontFamily: "Corbel, sans-serif" }}
               >
                 Continue
@@ -436,10 +475,16 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
             </div>
           )}
 
-          {submitted && (
+          {submitError && (
+            <div className="mt-4 rounded-lg border border-red-500/40 bg-red-50 px-4 py-3 text-sm text-red-800">
+              {submitError}
+            </div>
+          )}
+
+          {submitted && !submitError && (
             <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-              Thank you! We&apos;ve received your details and will contact you
-              shortly with a personalized quote.
+              Thank you! We&apos;ve received your details and will contact you shortly with a cash
+              offer and available pickup times.
             </div>
           )}
         </form>

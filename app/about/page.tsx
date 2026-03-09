@@ -1,11 +1,26 @@
-"use client";
-
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import GetQuoteForm from "../components/GetQuoteForm";
 import Steps from "../components/Steps";
 import Contact from "../components/Contact";
+
+export const metadata: Metadata = {
+  title: "About Cash4Cars GTA — Local Car Buyers You Can Trust",
+  description:
+    "Learn how Cash4Cars GTA helps drivers across the Greater Toronto Area and Northern Ontario sell used, damaged and scrap vehicles quickly, safely and for a fair price.",
+  openGraph: {
+    title: "About Cash4Cars GTA — Local Car Buyers You Can Trust",
+    description:
+      "Toronto-based cash-for-cars service providing fast cash offers, free towing and safe paperwork for used, damaged and scrap vehicles.",
+    type: "website",
+    url: "/about",
+  },
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutUs() {
   return (
@@ -19,15 +34,15 @@ export default function AboutUs() {
             className="text-4xl md:text-5xl font-bold text-[#222221] mb-3"
             style={{ fontFamily: "Corbel, sans-serif" }}
           >
-            About AutoDrive Motors
+            Local Car Buyers You Can Trust
           </h1>
           <p
             className="text-sm md:text-base text-[#6F6F6E] max-w-2xl mx-auto"
             style={{ fontFamily: "Corbel, sans-serif" }}
           >
-            We are a full‑service automotive hub helping drivers sell their
-            current car and discover their next one with confidence — from
-            valuation to keys in hand.
+            Cash4Cars GTA is a Toronto‑based cash‑for‑cars service helping drivers across the GTA
+            and Northern Ontario sell used, damaged and scrap vehicles quickly, safely and for a
+            fair price.
           </p>
         </section>
 

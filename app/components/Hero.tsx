@@ -45,8 +45,8 @@ export default function Hero() {
           {/* Background Image */}
           <div className="relative h-[720px] md:h-[820px] z-0 rounded-[2.5rem] overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80"
-              alt="Sport cars at sunset"
+              src="/hero-bg.jpg"
+              alt="Tow truck loading a car for Cash4Cars GTA"
               fill
               className="object-cover"
               priority
@@ -61,23 +61,29 @@ export default function Hero() {
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
                 <div className="text-left space-y-4 pt-40 md:pt-16">
-                  <p
-                    className="text-5xl md:text-[4.5rem] lg:text-[5rem] font-bold text-white leading-[1.02] tracking-tight"
-                    style={{ fontFamily: "Corbel, sans-serif" }}
-                  >
-                    We Buy Cars
-                  </p>
                   <h1
-                    className="text-5xl md:text-[4.5rem] lg:text-[5rem] font-bold text-white leading-[1.02] tracking-tight"
+                    className="text-4xl md:text-[3.5rem] lg:text-[4rem] font-bold text-white leading-[1.05] tracking-tight"
                     style={{ fontFamily: "Corbel, sans-serif" }}
                   >
-                    It&apos;s What We Do
+                    Sell Your Car in Toronto
                   </h1>
+                  <p
+                    className="text-4xl md:text-[3.5rem] lg:text-[4rem] font-bold text-white leading-[1.05] tracking-tight"
+                    style={{ fontFamily: "Corbel, sans-serif" }}
+                  >
+                    Get Cash Today
+                  </p>
                   <p
                     className="text-white text-lg md:text-2xl lg:text-3xl font-semibold"
                     style={{ fontFamily: "Corbel, sans-serif" }}
                   >
-                    Fast. Safe. Easy.
+                    We buy used, damaged, scrap and unwanted vehicles across the GTA.
+                  </p>
+                  <p
+                    className="text-white/90 text-sm md:text-base max-w-xl"
+                    style={{ fontFamily: "Corbel, sans-serif" }}
+                  >
+                    Free pickup, instant payment on the spot and no paperwork stress. Share a few details and get your cash offer in minutes.
                   </p>
                   <Link
                     href="/get-offer"
@@ -85,10 +91,10 @@ export default function Hero() {
                       e.preventDefault();
                       window.location.href = "/get-offer";
                     }}
-                    className="inline-block backdrop-blur-xl bg-white/20 hover:bg-white/30 border border-white/30 text-white font-semibold px-8 py-3.5 rounded-lg transition-all mt-6 shadow-2xl hover:shadow-[0_0_30px_rgba(249,220,10,0.3)] hover:border-[#F9DC0A]/50"
+                    className="inline-block backdrop-blur-xl bg-[#059669] hover:bg-[#047857] border border-[#10B981] text-white font-semibold px-8 py-3.5 rounded-lg transition-all mt-6 shadow-2xl hover:shadow-[0_0_30px_rgba(16,185,129,0.45)]"
                     style={{ fontFamily: "Corbel, sans-serif" }}
                   >
-                    Get Car Offer
+                    Get Cash Offer
                   </Link>
                 </div>
 
@@ -155,14 +161,14 @@ export default function Hero() {
                       <div className="flex items-center gap-3">
                         <button 
                           onClick={prevService}
-                          className="w-12 h-12 rounded-full bg-white text-[#222221] flex items-center justify-center transition-all shadow-lg hover:shadow-xl hover:bg-[#F9DC0A] hover:text-[#222221]"
+                          className="w-12 h-12 rounded-full bg-white text-[#222221] flex items-center justify-center transition-all shadow-lg hover:shadow-xl hover:bg-[#10B981] hover:text-white"
                           aria-label="Previous service"
                         >
                           <span className="text-xl">←</span>
                         </button>
                         <button 
                           onClick={nextService}
-                          className="w-12 h-12 rounded-full bg-white text-[#222221] flex items-center justify-center transition-all shadow-lg hover:shadow-xl hover:bg-[#F9DC0A] hover:text-[#222221]"
+                          className="w-12 h-12 rounded-full bg-white text-[#222221] flex items-center justify-center transition-all shadow-lg hover:shadow-xl hover:bg-[#10B981] hover:text-white"
                           aria-label="Next service"
                         >
                           <span className="text-xl">→</span>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -19,6 +20,7 @@ export default function Header() {
     { href: "/about", label: "About Us" },
     { href: "/locations", label: "Locations" },
     { href: "/how-it-works", label: "How it Works" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (
@@ -26,26 +28,16 @@ export default function Header() {
       <header className="backdrop-blur-xl bg-white/95 border border-[#E5E5E5] rounded-[2rem] fixed top-6 md:top-4 left-1/2 transform -translate-x-1/2 z-[80] shadow-lg w-[94%] md:w-[80%]">
         <div className="px-4 md:px-6 py-4 md:py-6 flex items-center justify-between relative">
           <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
-            <span
-              className="inline-flex items-center justify-center w-9 h-9 rounded-2xl bg-[#222221] text-[#F9DC0A] text-sm font-bold"
-              style={{ fontFamily: "Corbel, sans-serif" }}
-            >
-              AD
+            <span className="inline-flex items-center justify-center h-12 px-4 rounded-2xl bg-white">
+              <Image
+                src="/logo.png"
+                alt="Cash4Cars GTA logo"
+                width={120}
+                height={48}
+                className="object-contain"
+                priority
+              />
             </span>
-            <div className="flex flex-col leading-tight">
-              <span
-                className="text-base md:text-lg font-bold text-[#222221]"
-                style={{ fontFamily: "Corbel, sans-serif" }}
-              >
-                AutoDrive Motors
-              </span>
-              <span
-                className="hidden md:inline text-[11px] tracking-[0.18em] uppercase text-[#6F6F6E]"
-                style={{ fontFamily: "Corbel, sans-serif" }}
-              >
-                We Buy Cars
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,7 +46,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[#222221] hover:text-[#6F6F6E] font-bold transition-colors"
+                className="text-[#222221] hover:text-[#047857] font-bold transition-colors"
                 style={{ fontFamily: "Corbel, sans-serif" }}
               >
                 {item.label}
@@ -65,16 +57,16 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+15551234567"
-              className="text-sm font-semibold text-[#222221] hover:text-[#6F6F6E] transition-colors"
+              href="tel:+1437778210"
+              className="text-sm font-semibold text-[#222221] hover:text-[#047857] transition-colors"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
-              +1 (555) 123‑4567
+              +1 (437) 778‑210
             </a>
             <Link
               href="/get-offer"
               onClick={closeMenu}
-              className="inline-block bg-[#222221] hover:bg-[#6F6F6E] text-white font-semibold px-6 py-2.5 rounded-lg transition-all shadow-lg hover:shadow-xl"
+              className="inline-block bg-[#059669] hover:bg-[#047857] text-white font-semibold px-6 py-2.5 rounded-lg transition-all shadow-lg hover:shadow-xl"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
               Get Car Offer
@@ -135,7 +127,7 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-[#222221] hover:text-[#6F6F6E] font-bold py-4 text-2xl transition-colors border-b border-[#E0E0D8]"
+                    className="text-[#222221] hover:text-[#047857] font-bold py-4 text-2xl transition-colors border-b border-[#E0E0D8]"
                     style={{ fontFamily: "Corbel, sans-serif" }}
                     onClick={closeMenu}
                   >
@@ -143,16 +135,16 @@ export default function Header() {
                   </Link>
                 ))}
                 <a
-                  href="tel:+15551234567"
-                  className="mt-8 text-[#222221] font-semibold text-xl text-center"
+                  href="tel:+1437778210"
+                  className="mt-8 text-[#222221] font-semibold text-xl text-center hover:text-[#047857] transition-colors"
                   style={{ fontFamily: "Corbel, sans-serif" }}
                 >
-                  +1 (555) 123‑4567
+                  +1 (437) 778‑210
                 </a>
                 <Link
                   href="/get-offer"
                   onClick={closeMenu}
-                  className="mt-8 bg-[#222221] hover:bg-[#6F6F6E] text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg text-center text-xl"
+                  className="mt-8 bg-[#059669] hover:bg-[#047857] text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg text-center text-xl"
                   style={{ fontFamily: "Corbel, sans-serif" }}
                 >
                   Get Car Offer

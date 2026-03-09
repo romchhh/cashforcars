@@ -27,7 +27,7 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex"
+                className="bg-[#064E3B] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex"
               >
                 {/* Image Side - mobile: left/right alternating by index; desktop: from imagePosition */}
                 <div className={`relative w-1/2 flex-shrink-0 ${imageOrderMobile} ${imageOrderDesktop}`}>
@@ -40,7 +40,7 @@ export default function Services() {
                 </div>
 
                 {/* Information Side */}
-                <div className={`w-1/2 flex flex-col justify-center p-6 bg-[#77736D] ${textOrderMobile} ${textOrderDesktop}`}>
+                <div className={`w-1/2 flex flex-col justify-center p-6 bg-[#065F46] ${textOrderMobile} ${textOrderDesktop}`}>
                   {/* Icon */}
                   {service.Icon && (
                     <div className="text-white mb-4 text-center flex justify-center">

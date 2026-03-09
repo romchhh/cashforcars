@@ -13,52 +13,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://autosite.example.com"),
+  metadataBase: new URL("https://cash4cars-gta.example.com"),
   title: {
-    default: "AutoDrive Motors — Premium Car Deals & Services",
-    template: "%s | AutoDrive Motors",
+    default: "Cash4Cars GTA — Sell Your Car for Cash Today",
+    template: "%s | Cash4Cars GTA",
   },
   description:
-    "AutoDrive Motors helps you buy, sell and finance cars with ease — instant online offers, verified vehicles, transparent pricing and full support from test drive to keys in hand.",
+    "Cash4Cars GTA buys used, damaged and scrap vehicles across the Greater Toronto Area and Northern Ontario. Instant cash offers, free towing and no‑stress paperwork.",
   keywords: [
-    "AutoDrive Motors",
-    "buy car online",
-    "sell my car",
-    "car trade in",
-    "car financing",
-    "used cars marketplace",
-    "new cars deals",
+    "Cash4Cars GTA",
+    "cash for cars Toronto",
+    "sell my car GTA",
+    "scrap car removal Toronto",
+    "sell junk car Ontario",
+    "we buy cars GTA",
+    "sell damaged car for cash",
   ],
-  authors: [{ name: "AutoDrive Motors" }],
+  authors: [{ name: "Cash4Cars GTA" }],
   openGraph: {
     type: "website",
     url: "/",
-    title: "AutoDrive Motors — Premium Car Deals & Services",
+    title: "Cash4Cars GTA — Sell Your Car for Cash Today",
     description:
-      "Discover premium cars, instant offers and flexible financing with AutoDrive Motors. Everything you need to buy or sell your next car in one place.",
-    siteName: "AutoDrive Motors",
+      "Get an instant cash offer for your car anywhere in the GTA. We buy used, damaged, non‑running and scrap vehicles with free towing and on‑the‑spot payment.",
+    siteName: "Cash4Cars GTA",
     images: [
       {
         url: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
         width: 1200,
         height: 630,
-        alt: "AutoDrive Motors — premium cars at sunset",
+        alt: "Cash4Cars GTA — tow truck loading a car at sunset",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AutoDrive Motors — Premium Car Deals & Services",
+    title: "Cash4Cars GTA — Cash for Cars in Toronto & Ontario",
     description:
-      "Browse premium cars, request an instant offer and get full support from AutoDrive Motors.",
+      "Sell your car fast for cash in the GTA and Northern Ontario. Free towing, no hidden fees and guaranteed payment on pickup.",
     images: [
       "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
     ],
   },
   icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-    ],
+    icon: [{ url: "/favicon.png", type: "image/png" }],
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
