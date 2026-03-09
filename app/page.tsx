@@ -2,7 +2,6 @@
 
 import Hero from "./components/Hero";
 import GetQuoteForm from "./components/GetQuoteForm";
-import Steps from "./components/Steps";
 import Services from "./components/Services";
 import About from "./components/About";
 import FAQs from "./components/FAQs";
@@ -53,7 +52,6 @@ export default function Home() {
           <GetQuoteForm />
         </div>
         <ValueProps />
-        <Steps />
         <About />
         <FAQs />
         <Services />

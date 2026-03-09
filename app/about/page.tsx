@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import GetQuoteForm from "../components/GetQuoteForm";
-import Steps from "../components/Steps";
 import Contact from "../components/Contact";
 
 export const metadata: Metadata = {
@@ -48,9 +47,6 @@ export default function AboutUs() {
 
         {/* Main about content block (reuses site About section) */}
         <About />
-
-        {/* 3‑step process block */}
-        <Steps />
 
         {/* Inline quote form on about page */}
         <section className="max-w-[1100px] mx-auto px-4 md:px-0">

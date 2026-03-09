@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { CarFront, FileCheck, Truck, Wallet } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+const iconClass = "w-8 h-8 md:w-10 md:h-10 text-emerald-600";
 
 export const metadata: Metadata = {
   title: "How It Works — 4 Simple Steps to Sell Your Car for Cash",
@@ -39,27 +42,35 @@ export default function HowItWorksPage() {
           </p>
 
           <div className="relative">
-            {/* vertical connector line on desktop */}
-            <div className="hidden md:block absolute left-1/2 top-8 bottom-8 -translate-x-1/2 pointer-events-none">
-              <div className="w-0.5 h-full bg-gradient-to-b from-emerald-200 via-emerald-400 to-emerald-200 rounded-full" />
-            </div>
+            {/* Arrow icon components */}
+            <svg className="hidden" aria-hidden>
+              <defs>
+                <symbol id="arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </symbol>
+                <symbol id="arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 5v14M5 12l7 7 7-7" />
+                </symbol>
+              </defs>
+            </svg>
 
-            <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+            <div className="flex flex-col gap-6 md:gap-8 items-stretch max-w-2xl mx-auto">
               {/* Step 1 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-emerald-50 p-6 md:p-8 flex flex-col">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative">
-                    <div className="h-11 w-11 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shadow-[0_10px_25px_rgba(4,120,87,0.35)]">
+              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+                <div className="flex flex-col mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
                       1
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/60" />
+                    </span>
+                    <CarFront className={iconClass} strokeWidth={1.8} />
+                    <span
+                      className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700"
+                      style={{ fontFamily: "Corbel, sans-serif" }}
+                    >
+                      Start here
+                    </span>
                   </div>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700"
-                    style={{ fontFamily: "Corbel, sans-serif" }}
-                  >
-                    Start here
-                  </span>
+                  <div className="h-1 w-16 bg-emerald-500 rounded-full mt-3" />
                 </div>
                 <h2
                   className="text-xl md:text-2xl font-bold text-[#222221] mb-2"
@@ -81,21 +92,22 @@ export default function HowItWorksPage() {
                 </p>
               </div>
 
+              {/* Arrow down */}
+              <div className="flex justify-center py-2 text-emerald-500" aria-hidden>
+                <svg className="w-6 h-6 md:w-8 md:h-8" aria-hidden><use href="#arrow-down" /></svg>
+              </div>
+
               {/* Step 2 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-emerald-50 p-6 md:p-8 flex flex-col">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative">
-                    <div className="h-11 w-11 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shadow-[0_10px_25px_rgba(4,120,87,0.35)]">
+              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+                <div className="flex flex-col mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
                       2
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/60" />
+                    </span>
+                    <FileCheck className={iconClass} strokeWidth={1.8} />
+
                   </div>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700"
-                    style={{ fontFamily: "Corbel, sans-serif" }}
-                  >
-                    Get your quote
-                  </span>
+                  <div className="h-1 w-16 bg-emerald-500 rounded-full mt-3" />
                 </div>
                 <h2
                   className="text-xl md:text-2xl font-bold text-[#222221] mb-2"
@@ -117,21 +129,22 @@ export default function HowItWorksPage() {
                 </p>
               </div>
 
+              {/* Arrow down */}
+              <div className="flex justify-center py-2 text-emerald-500" aria-hidden>
+                <svg className="w-6 h-6 md:w-8 md:h-8" aria-hidden><use href="#arrow-down" /></svg>
+              </div>
+
               {/* Step 3 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-emerald-50 p-6 md:p-8 flex flex-col">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative">
-                    <div className="h-11 w-11 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shadow-[0_10px_25px_rgba(4,120,87,0.35)]">
+              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+                <div className="flex flex-col mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
                       3
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/60" />
+                    </span>
+                    <Truck className={iconClass} strokeWidth={1.8} />
+
                   </div>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700"
-                    style={{ fontFamily: "Corbel, sans-serif" }}
-                  >
-                    Schedule pickup
-                  </span>
+                  <div className="h-1 w-16 bg-emerald-500 rounded-full mt-3" />
                 </div>
                 <h2
                   className="text-xl md:text-2xl font-bold text-[#222221] mb-2"
@@ -153,21 +166,27 @@ export default function HowItWorksPage() {
                 </p>
               </div>
 
+              {/* Arrow down */}
+              <div className="flex justify-center py-2 text-emerald-500" aria-hidden>
+                <svg className="w-6 h-6 md:w-8 md:h-8" aria-hidden><use href="#arrow-down" /></svg>
+              </div>
+
               {/* Step 4 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-emerald-50 p-6 md:p-8 flex flex-col">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative">
-                    <div className="h-11 w-11 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shadow-[0_10px_25px_rgba(4,120,87,0.35)]">
+              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+                <div className="flex flex-col mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
                       4
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/60" />
+                    </span>
+                    <Wallet className={iconClass} strokeWidth={1.8} />
+                    <span
+                      className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700"
+                      style={{ fontFamily: "Corbel, sans-serif" }}
+                    >
+                      Get paid
+                    </span>
                   </div>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700"
-                    style={{ fontFamily: "Corbel, sans-serif" }}
-                  >
-                    Get paid
-                  </span>
+                  <div className="h-1 w-16 bg-emerald-500 rounded-full mt-3" />
                 </div>
                 <h2
                   className="text-xl md:text-2xl font-bold text-[#222221] mb-2"

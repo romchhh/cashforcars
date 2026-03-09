@@ -60,7 +60,8 @@ export async function POST(req: NextRequest) {
 
     const now = new Date();
     const timestamp = now.toISOString();
-    const fullPhone = `${countryCode} ${phone}`.trim();
+    const cleanedCountryCode = String(countryCode).replace(/^\+/, "");
+    const fullPhone = `${cleanedCountryCode}${phone}`.trim();
 
     const values = [
       [
