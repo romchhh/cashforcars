@@ -75,7 +75,7 @@ export const services: Service[] = [
     subtitle: "We Come to You",
     description:
       "From Toronto, Mississauga and Brampton to North Bay, Sudbury, Timmins and Thunder Bay — our buyers and tow partners operate across key Ontario cities.",
-    image: "/services/download-1dsda.jpg",
+    image: "/services/hands-exchange-money-car-keys_iStock-1505225919.webp",
     imagePosition: "left",
     Icon: MapPin,
     icon: "📍",

@@ -48,7 +48,7 @@ export default function Home() {
         <Header />
 
         <Hero />
-        <div className="relative z-50 mt-6 md:-mt-32 mb-16">
+        <div className="relative z-50 mt-32 md:-mt-32 mb-16">
           <GetQuoteForm />
         </div>
         <ValueProps />

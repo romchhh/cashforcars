@@ -8,7 +8,7 @@ export default function Services() {
         {/* Title */}
         <div className="text-center mb-12">
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#222221] leading-tight"
+            className="text-3xl md:text-5xl font-bold text-[#222221] leading-tight"
             style={{ fontFamily: "Corbel, sans-serif" }}
           >
             Car Services & Offers
@@ -19,18 +19,15 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const imageOnLeftDesktop = service.imagePosition === 'left';
-            const imageOnLeftMobile = index % 2 === 0;
-            const imageOrderMobile = imageOnLeftMobile ? 'order-1' : 'order-2';
             const imageOrderDesktop = imageOnLeftDesktop ? 'md:order-1' : 'md:order-2';
-            const textOrderMobile = imageOnLeftMobile ? 'order-2' : 'order-1';
             const textOrderDesktop = imageOnLeftDesktop ? 'md:order-2' : 'md:order-1';
             return (
               <div
                 key={index}
-                className="bg-[#064E3B] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex"
+                className="bg-[#064E3B] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col md:flex-row"
               >
-                {/* Image Side - mobile: left/right alternating by index; desktop: from imagePosition */}
-                <div className={`relative w-1/2 flex-shrink-0 ${imageOrderMobile} ${imageOrderDesktop}`}>
+                {/* Image Side - mobile: full width on top; desktop: from imagePosition */}
+                <div className={`relative w-full h-48 md:h-auto md:w-1/2 flex-shrink-0 ${imageOrderDesktop}`}>
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -38,23 +35,26 @@ export default function Services() {
                     className="object-cover"
                   />
                 </div>
-
                 {/* Information Side */}
-                <div className={`w-1/2 flex flex-col justify-center p-6 bg-[#065F46] ${textOrderMobile} ${textOrderDesktop}`}>
-                  {/* Icon */}
-                  {service.Icon && (
-                    <div className="text-white mb-4 text-center flex justify-center">
-                      <service.Icon className="w-12 h-12" strokeWidth={1.5} />
-                    </div>
-                  )}
-                  
-                  {/* Title */}
-                  <h3 className="text-white text-lg font-bold mb-3 leading-tight text-center" style={{ fontFamily: 'Corbel, sans-serif' }}>
-                    {service.title}
-                  </h3>
+                <div className={`w-full md:w-1/2 flex flex-col justify-center p-5 md:p-6 bg-[#065F46] ${textOrderDesktop}`}>
+                  {/* Icon + Title in one row, icon on the left */}
+                  <div className="flex items-center gap-3 mb-2">
+                    {service.Icon && (
+                      <service.Icon className="w-10 h-10 text-white flex-shrink-0" strokeWidth={1.5} />
+                    )}
+                    <h3
+                      className="text-white text-base md:text-lg font-bold leading-tight text-left"
+                      style={{ fontFamily: 'Corbel, sans-serif' }}
+                    >
+                      {service.title}
+                    </h3>
+                  </div>
                   
                   {/* Description */}
-                  <p className="text-white/90 text-sm font-medium leading-relaxed text-center" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  <p
+                    className="text-white/90 text-sm font-medium leading-relaxed text-left"
+                    style={{ fontFamily: 'Corbel, sans-serif' }}
+                  >
                     {service.description}
                   </p>
                 </div>
