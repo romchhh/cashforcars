@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -52,7 +53,7 @@ export default function FAQs() {
 
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-10 lg:gap-16 items-start mb-10 md:mb-16">
+        <RevealOnScroll className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-10 lg:gap-16 items-start mb-10 md:mb-16" delay={100}>
           <div className="text-left">
             <h2
               className="text-4xl md:text-5xl font-bold text-[#222221] leading-tight mb-3"
@@ -115,9 +116,9 @@ export default function FAQs() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
-        </div>
-      </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

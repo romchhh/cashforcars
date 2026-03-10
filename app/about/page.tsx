@@ -30,10 +30,12 @@ export default function AboutUs() {
         {/* Hero / Intro */}
         <section className="max-w-[1100px] mx-auto px-4 md:px-0 mb-10 text-center">
           <h1
-            className="text-4xl md:text-5xl font-bold text-[#222221] mb-3"
+            className="text-4xl md:text-5xl font-bold text-[#222221] mb-3 leading-tight"
             style={{ fontFamily: "Corbel, sans-serif" }}
           >
-            Local Car Buyers You Can Trust
+            Local Car Buyers
+            <br />
+            You Can Trust
           </h1>
           <p
             className="text-sm md:text-base text-[#6F6F6E] max-w-2xl mx-auto"

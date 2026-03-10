@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="backdrop-blur-xl bg-white/95 border border-[#E5E5E5] rounded-[2rem] fixed top-6 md:top-4 left-1/2 transform -translate-x-1/2 z-[80] shadow-lg w-[94%] md:w-[80%]">
+      <header className="backdrop-blur-xl bg-white/95 border border-[#E5E5E5] rounded-[2rem] fixed top-6 md:top-10 left-1/2 transform -translate-x-1/2 z-[80] shadow-lg w-[94%] md:w-[80%]">
         <div className="px-4 md:px-6 py-4 md:py-6 flex items-center justify-between relative">
           <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
             <span className="inline-flex items-center justify-center h-12 px-4 rounded-2xl bg-white">
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+1437778210"
-              className="text-sm font-semibold text-[#222221] hover:text-[#047857] transition-colors"
+              className="text-sm font-semibold text-[#222221] no-underline hover:text-[#047857] transition-colors"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
               +1 (437) 778‑210
@@ -136,7 +136,7 @@ export default function Header() {
                 ))}
                 <a
                   href="tel:+1437778210"
-                  className="mt-8 text-[#222221] font-semibold text-xl text-center hover:text-[#047857] transition-colors"
+                  className="mt-8 text-[#222221] font-semibold text-xl text-center no-underline hover:text-[#047857] transition-colors"
                   style={{ fontFamily: "Corbel, sans-serif" }}
                 >
                   +1 (437) 778‑210

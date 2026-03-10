@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { heroServices } from "../data/services";
+import RevealOnScroll from "./RevealOnScroll";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,7 +61,7 @@ export default function Hero() {
             <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
-                <div className="text-left space-y-4 pt-40 md:pt-16">
+                <RevealOnScroll className="text-left space-y-4 pt-64 md:pt-16" delay={100}>
                   <h1
                     className="text-4xl md:text-[3.5rem] lg:text-[4rem] font-bold text-white leading-[1.05] tracking-tight"
                     style={{ fontFamily: "Corbel, sans-serif" }}
@@ -96,10 +97,10 @@ export default function Hero() {
                   >
                     Get Cash Offer
                   </Link>
-                </div>
+                </RevealOnScroll>
 
                 {/* Right Side - Image Cards */}
-                <div className="relative flex items-center justify-center md:justify-end">
+                <RevealOnScroll className="relative flex items-center justify-center md:justify-end" delay={250}>
                   <div className="relative w-full max-w-md">
                     {/* Card Stack */}
                     <div className="relative">
@@ -184,7 +185,7 @@ export default function Hero() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </RevealOnScroll>
               </div>
             </div>
           </div>

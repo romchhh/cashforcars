@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import RevealOnScroll from "./RevealOnScroll";
 
 export default function Footer() {
   return (
     <footer className="bg-[#222221] rounded-b-[2rem] text-white">
       <div className="max-w-[1400px] mx-auto px-8 py-16">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <RevealOnScroll className="grid md:grid-cols-3 gap-12 mb-12" delay={100}>
           {/* Left Column - Branding */}
           <div>
             <Link href="#home" className="inline-block mb-4">
@@ -74,19 +75,24 @@ export default function Footer() {
 
           {/* Right Column - Contact */}
           <div>
-            <p className="text-xs uppercase tracking-wider mb-4 text-[#6F6F6E] font-bold" style={{ fontFamily: 'Corbel, sans-serif' }}>SAY HELLO</p>
+            <p
+              className="text-sm uppercase tracking-wider mb-2 text-[#6F6F6E] font-bold"
+              style={{ fontFamily: 'Corbel, sans-serif' }}
+            >
+              SAY HELLO
+            </p>
             <a
               href="tel:+1437778210"
-              className="text-2xl font-bold text-white inline-block hover:text-[#F9DC0A] transition-colors"
+              className="text-2xl font-bold text-white inline-block no-underline hover:text-[#F9DC0A] transition-colors"
               style={{ fontFamily: 'Corbel, sans-serif' }}
             >
               +1 (437) 778‑210
             </a>
           </div>
-        </div>
+        </RevealOnScroll>
 
         {/* Bottom Line */}
-        <div className="border-t border-[#6F6F6E]/50 pt-8 text-center">
+        <RevealOnScroll className="border-t border-[#6F6F6E]/50 pt-8 text-center" delay={200}>
           <p className="text-xs text-[#6F6F6E]" style={{ fontFamily: 'Corbel, sans-serif' }}>
             Cash4Cars GTA © All rights reserved. Proudly Designed & Developed by{' '}
             <Link 
@@ -98,7 +104,7 @@ export default function Footer() {
               TeleBots
             </Link>
           </p>
-        </div>
+        </RevealOnScroll>
       </div>
     </footer>
   );

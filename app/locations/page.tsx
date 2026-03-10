@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import RevealOnScroll from "../components/RevealOnScroll";
 
 export const metadata: Metadata = {
   title: "Service Areas — Cash4Cars GTA Locations in the GTA & Northern Ontario",
@@ -77,6 +78,7 @@ export default function LocationsPage() {
       <Header />
       <main className="pt-28 md:pt-40 pb-16">
         <section className="max-w-[1100px] mx-auto px-4 md:px-0">
+          <RevealOnScroll className="text-center" delay={100}>
           <h1
             className="text-4xl md:text-5xl font-bold text-[#222221] mb-3 text-center"
             style={{ fontFamily: "Corbel, sans-serif" }}
@@ -90,11 +92,13 @@ export default function LocationsPage() {
             Cash4Cars GTA buys vehicles across the Greater Toronto Area and key cities in Northern
             Ontario. Find your area below and request a free, no‑obligation cash offer.
           </p>
-          <div className="grid gap-6 md:grid-cols-3">
-            {locations.map((loc) => (
-              <div
+          </RevealOnScroll>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {locations.map((loc, index) => (
+              <RevealOnScroll
                 key={loc.name}
                 className="bg-white rounded-2xl shadow-lg p-6 flex flex-col"
+                delay={150 + index * 50}
               >
                 <p
                   className="text-xs uppercase tracking-[0.18em] text-[#6F6F6E] mb-2 font-semibold"
@@ -120,7 +124,7 @@ export default function LocationsPage() {
                 >
                   {loc.details}
                 </p>
-                <div className="mt-5">
+                <div className="mt-auto pt-5">
                   <Link
                     href="/get-offer"
                     className="inline-flex w-full items-center justify-center rounded-full bg-[#059669] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#047857] transition-colors"
@@ -129,7 +133,7 @@ export default function LocationsPage() {
                     Get your cash offer
                   </Link>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </section>

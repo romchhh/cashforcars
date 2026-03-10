@@ -2,12 +2,13 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function Contact() {
   return (
     <section id="contact" className="relative py-20 scroll-mt-24">
       <div className="max-w-[1400px] mx-auto px-3 md:px-8 pt-4 pb-12">
-        <div className="relative bg-white rounded-[2.5rem] shadow-2xl overflow-hidden">
+        <RevealOnScroll className="relative bg-white rounded-[2.5rem] shadow-2xl overflow-hidden" delay={100}>
           {/* Background Image */}
           <div className="relative h-[420px] md:h-[360px] z-0">
             <Image
@@ -48,7 +49,10 @@ export default function Contact() {
                   style={{ fontFamily: 'Corbel, sans-serif' }}
                 >
                   Call or text:{' '}
-                  <a href="tel:+1437778210" className="font-semibold underline underline-offset-4">
+                  <a
+                    href="tel:+1437778210"
+                    className="font-semibold no-underline hover:text-[#F9DC0A] transition-colors"
+                  >
                     +1 (437) 778‑210
                   </a>
                 </p>
@@ -62,7 +66,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

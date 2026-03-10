@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { CarFront, FileCheck, Truck, Wallet } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import RevealOnScroll from "../components/RevealOnScroll";
 
 const iconClass = "w-8 h-8 md:w-10 md:h-10 text-emerald-600";
 
@@ -27,19 +29,21 @@ export default function HowItWorksPage() {
       <Header />
       <main className="pt-28 md:pt-40 pb-16">
         <section className="max-w-[1000px] mx-auto px-4 md:px-0">
+          <RevealOnScroll className="text-center" delay={100}>
           <h1
             className="text-4xl md:text-5xl font-bold text-[#222221] mb-4 text-center"
             style={{ fontFamily: "Corbel, sans-serif" }}
           >
             How It Works
           </h1>
-
+          
           <p
             className="text-base md:text-lg text-center text-[#6F6F6E] mb-12 max-w-2xl mx-auto"
             style={{ fontFamily: "Corbel, sans-serif" }}
           >
             This page is simple: four clear steps from request to payment.
           </p>
+          </RevealOnScroll>
 
           <div className="relative">
             {/* Arrow icon components */}
@@ -56,7 +60,7 @@ export default function HowItWorksPage() {
 
             <div className="flex flex-col gap-6 md:gap-8 items-stretch max-w-2xl mx-auto">
               {/* Step 1 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+              <RevealOnScroll className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col" delay={150}>
                 <div className="flex flex-col mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
@@ -90,7 +94,7 @@ export default function HowItWorksPage() {
                 >
                   Tell us your make, model, year, mileage and overall condition so we can prepare an accurate offer.
                 </p>
-              </div>
+              </RevealOnScroll>
 
               {/* Arrow down */}
               <div className="flex justify-center py-2 text-emerald-500" aria-hidden>
@@ -98,7 +102,7 @@ export default function HowItWorksPage() {
               </div>
 
               {/* Step 2 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+              <RevealOnScroll className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col" delay={250}>
                 <div className="flex flex-col mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
@@ -127,7 +131,7 @@ export default function HowItWorksPage() {
                 >
                   You&apos;ll see exactly how much you can get for your vehicle — no hidden fees or last‑minute changes.
                 </p>
-              </div>
+              </RevealOnScroll>
 
               {/* Arrow down */}
               <div className="flex justify-center py-2 text-emerald-500" aria-hidden>
@@ -135,7 +139,7 @@ export default function HowItWorksPage() {
               </div>
 
               {/* Step 3 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+              <RevealOnScroll className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col" delay={350}>
                 <div className="flex flex-col mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
@@ -164,7 +168,7 @@ export default function HowItWorksPage() {
                 >
                   We come to your home, workplace or storage lot anywhere within our service area.
                 </p>
-              </div>
+              </RevealOnScroll>
 
               {/* Arrow down */}
               <div className="flex justify-center py-2 text-emerald-500" aria-hidden>
@@ -172,7 +176,7 @@ export default function HowItWorksPage() {
               </div>
 
               {/* Step 4 */}
-              <div className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col">
+              <RevealOnScroll className="relative bg-white/90 backdrop-blur rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col" delay={450}>
                 <div className="flex flex-col mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl md:text-4xl font-bold text-emerald-600" style={{ fontFamily: "Corbel, sans-serif" }}>
@@ -206,10 +210,12 @@ export default function HowItWorksPage() {
                 >
                   You hand over the keys and paperwork — we handle the towing and you&apos;re done.
                 </p>
-              </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
+
+        <Contact />
       </main>
       <Footer />
     </div>
