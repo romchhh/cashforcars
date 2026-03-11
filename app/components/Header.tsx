@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+14377782102"
-              className="text-sm font-semibold text-[#222221] no-underline hover:text-[#047857] transition-colors"
+              className="text-base lg:text-lg font-semibold text-[#222221] no-underline hover:text-[#047857] transition-colors"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
               +1(437)-778-2102
@@ -73,28 +73,37 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Burger Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden flex flex-col gap-1.5 p-2 z-[60] relative"
-            aria-label="Toggle menu"
-          >
-            <span
-              className={`w-6 h-0.5 bg-[#222221] transition-all duration-300 ${
-                isMenuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-[#222221] transition-all duration-300 ${
-                isMenuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-[#222221] transition-all duration-300 ${
-                isMenuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
-            />
-          </button>
+          {/* Mobile phone + Burger */}
+          <div className="flex items-center gap-3 md:hidden">
+            <a
+              href="tel:+14377782102"
+              className="text-base font-semibold text-[#222221] no-underline hover:text-[#047857] transition-colors"
+              style={{ fontFamily: "Corbel, sans-serif" }}
+            >
+              +1(437)-778-2102
+            </a>
+            <button
+              onClick={toggleMenu}
+              className="flex flex-col gap-1.5 p-2 z-[60] relative"
+              aria-label="Toggle menu"
+            >
+              <span
+                className={`w-6 h-0.5 bg-[#222221] transition-all duration-300 ${
+                  isMenuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              />
+              <span
+                className={`w-6 h-0.5 bg-[#222221] transition-all duration-300 ${
+                  isMenuOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`w-6 h-0.5 bg-[#222221] transition-all duration-300 ${
+                  isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
+              />
+            </button>
+          </div>
         </div>
       </header>
 

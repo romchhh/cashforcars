@@ -50,14 +50,18 @@ export default function Contact() {
                 >
                   Call or text:{' '}
                   <a
-                    href="tel:+1437778210"
-                    className="font-semibold no-underline hover:text-[#F9DC0A] transition-colors"
+                    href="tel:+14377782102"
+                    className="font-semibold text-lg md:text-2xl no-underline hover:text-[#F9DC0A] transition-colors"
                   >
-                    +1 (437) 778‑2102  
+                    +1(437)-778-2102
                   </a>
                 </p>
                 <Link
                   href="/get-offer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = "/get-offer";
+                  }}
                   className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-[#059669] hover:bg-[#047857] text-white font-semibold text-sm md:text-base shadow-lg hover:shadow-xl transition-all"
                   style={{ fontFamily: 'Corbel, sans-serif' }}
                 >

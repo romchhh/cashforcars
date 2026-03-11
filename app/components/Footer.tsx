@@ -82,11 +82,11 @@ export default function Footer() {
               SAY HELLO
             </p>
             <a
-              href="tel:+1437778210"
+              href="tel:+14377782102"
               className="text-2xl font-bold text-white inline-block no-underline hover:text-[#F9DC0A] transition-colors"
               style={{ fontFamily: 'Corbel, sans-serif' }}
             >
-              +1 (437) 778‑2102  
+              +1(437)-778-2102
             </a>
           </div>
         </RevealOnScroll>
