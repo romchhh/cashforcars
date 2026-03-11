@@ -53,7 +53,7 @@ export default function Contact() {
                     href="tel:+1437778210"
                     className="font-semibold no-underline hover:text-[#F9DC0A] transition-colors"
                   >
-                    +1 (437) 778‑210
+                    +1 (437) 778‑2102  
                   </a>
                 </p>
                 <Link

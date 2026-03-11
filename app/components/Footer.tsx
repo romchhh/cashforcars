@@ -86,7 +86,7 @@ export default function Footer() {
               className="text-2xl font-bold text-white inline-block no-underline hover:text-[#F9DC0A] transition-colors"
               style={{ fontFamily: 'Corbel, sans-serif' }}
             >
-              +1 (437) 778‑210
+              +1 (437) 778‑2102  
             </a>
           </div>
         </RevealOnScroll>

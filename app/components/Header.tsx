@@ -57,11 +57,11 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+1437778210"
+              href="tel:+14377782102"
               className="text-sm font-semibold text-[#222221] no-underline hover:text-[#047857] transition-colors"
               style={{ fontFamily: "Corbel, sans-serif" }}
             >
-              +1 (437) 778‑210
+              +1(437)-778-2102
             </a>
             <Link
               href="/get-offer"
@@ -135,11 +135,11 @@ export default function Header() {
                   </Link>
                 ))}
                 <a
-                  href="tel:+1437778210"
+                  href="tel:+14377782102"
                   className="mt-8 text-[#222221] font-semibold text-xl text-center no-underline hover:text-[#047857] transition-colors"
                   style={{ fontFamily: "Corbel, sans-serif" }}
                 >
-                  +1 (437) 778‑210
+                  +1(437)-778-2102
                 </a>
                 <Link
                   href="/get-offer"
