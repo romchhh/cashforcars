@@ -100,7 +100,7 @@ export default function Hero() {
                 </RevealOnScroll>
 
                 {/* Right Side - Image Cards */}
-                <RevealOnScroll className="relative flex items-center justify-center md:justify-end" delay={250}>
+                <RevealOnScroll className="relative flex items-center justify-center md:justify-end md:-mt-16 lg:-mt-32" delay={250}>
                   <div className="relative w-full max-w-md">
                     {/* Card Stack */}
                     <div className="relative">
