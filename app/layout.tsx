@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Cash4Cars GTA",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
+        url: "/hero-bg.jpg",
         width: 1200,
         height: 630,
         alt: "Cash4Cars GTA — tow truck loading a car at sunset",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "Sell your car fast for cash in the GTA and Northern Ontario. Free towing, no hidden fees and guaranteed payment on pickup.",
     images: [
-      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
+      "/hero-bg.jpg",
     ],
   },
   icons: {
