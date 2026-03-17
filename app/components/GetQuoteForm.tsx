@@ -120,7 +120,7 @@ export default function GetQuoteForm({ showHeading = true }: GetQuoteFormProps) 
       }
 
       setSubmitted(true);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.location.href = "/thank-you";
     } catch (err) {
       const message =
         err instanceof Error ? err.message : "Failed to submit quote";
