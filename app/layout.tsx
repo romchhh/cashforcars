@@ -102,6 +102,24 @@ gtag('config', 'AW-18018330829');`,
           }}
         />
 
+        {/* Google tag (gtag.js) - GA4 */}
+        <Script
+          id="gtag-js-ga4"
+          strategy="beforeInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-SN335ZCCV3"
+        />
+        <Script
+          id="gtag-config-ga4"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-SN335ZCCV3');`,
+          }}
+        />
+
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
